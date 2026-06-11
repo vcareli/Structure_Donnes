@@ -15,9 +15,10 @@ public class Triselection {
 		tab[y] = aux;
    }
 	public static void main(String[] args) {
-		int tableau[] = {322, 324, 0, 5, 343, 21, 34, 20, 546, 523, 43, 658, 832, 4, 234, 435, 5476, 769678, 423, 455, 234, 2};
+		int tableau[] = {21, 64, 33, 16, 17, 99, 14, 12, 18, 55};
 		System.out.println("Tableau initial:");
 		Afficher_tableau(tableau);
+		System.out.println();
 		for(int i = 0; i < tableau.length; ++i) {
 			int mini = i;
 			for(int j = i + 1; j < tableau.length; ++j) {
@@ -26,9 +27,11 @@ public class Triselection {
 				}
 			}
 			if (mini > i) {
+				System.out.println("troca " + tableau[mini] + " por " + tableau[i]);
 				Permut(tableau, i, mini);
 			}
 		}
+		System.out.println();
 		System.out.println("Tableau final:");
 		Afficher_tableau(tableau);
 	}

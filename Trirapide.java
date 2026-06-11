@@ -21,6 +21,7 @@ public class Trirapide {
 		for (int j = p; j < r; j++){
 			if (tab[j] <= x){
 				i++;
+				System.out.println("troca " + tab[i] + " por " + tab[j]);
 				Permut(tab, i, j);
 			}
 		}
@@ -38,10 +39,12 @@ public class Trirapide {
 	}
 
 	public static void main(String[] args) {
-		int tableau[] = {322, 324, 0, 5, 343, 21, 34, 20, 546, 523, 43, 658, 832, 4, 234, 435, 5476, 769678, 423, 455, 234, 2};
+		int tableau[] = {21, 64, 33, 16, 17, 99, 14, 12, 18, 55};
 		System.out.println("Tableau initial:");
 		Afficher_tableau(tableau);
+		System.out.println();
 		Tri_rapide(tableau, 0, tableau.length - 1);
+		System.out.println();
 		System.out.println("Tableau final:");
 		Afficher_tableau(tableau);
 	}

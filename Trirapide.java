@@ -18,10 +18,10 @@ public class Trirapide {
 	public static int Partition(int[] tab, int p, int r) {
 		int x = tab[r];
 		int i = p - 1;
+		System.out.println("o pivot é: " + x);
 		for (int j = p; j < r; j++){
 			if (tab[j] <= x){
 				i++;
-				System.out.println("troca " + tab[i] + " por " + tab[j]);
 				Permut(tab, i, j);
 			}
 		}
